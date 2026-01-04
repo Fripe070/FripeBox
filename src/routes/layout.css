@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@import "@fontsource/fira-mono";
+
+@theme {
+    --font-body: Arial, sans-serif;
+    --font-mono: "Fira Mono", monospace;
+
+    --color-back-0: #101010;
+    --color-back-1: #181818;
+    --color-back-2: #202020;
+
+    --color-front-0: #eee;
+    --color-front-1: #ccc;
+    --color-front-2: #999;
+
+    --color-accent: #00c0f0;
+
+    --sidebar-width: 20rem;
+}
+
+html,
+body,
+.app-body {
+    @apply bg-back-0 text-front-0;
+    @apply h-screen min-h-svh w-full;
+    @apply font-sans;
+    font-size: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--theme-foreground-muted) var(--theme-background-secondary);
+    &::selection {
+        @apply bg-accent text-back-0;
+    }
+}
+
+a,
+.link {
+    @apply cursor-pointer;
+    &:not(.no-link) {
+        @apply font-semibold text-accent no-underline hover:underline;
+    }
+}
+
+h1 {
+    @apply text-2xl font-bold;
+}
+h2 {
+    @apply text-xl font-bold;
+}
+h3 {
+    @apply text-lg font-semibold;
+}
+code,
+pre {
+    @apply font-mono;
+}
