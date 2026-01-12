@@ -5,7 +5,7 @@
 </script>
 
 {#if sidebar}
-    <div class={["flex w-(--sidebar-width) flex-col gap-1 bg-back-1 p-3 text-center"]}>
+    <div class={["flex overflow-y-auto w-(--sidebar-width) shrink-0 flex-col gap-1 bg-back-1 p-3 text-center"]}>
         {@render sidebar()}
     </div>
 {/if}

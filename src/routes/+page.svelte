@@ -36,10 +36,6 @@
 
 <div class="flex size-full justify-center">
     <div class="grid size-fit grid-cols-1 gap-4 p-4 *:justify-self-center md:grid-cols-2">
-        {@render card(
-            "ASCII Art Maker",
-            "/ascii",
-            "Convert images into ASCII art.",
-        )}
+        {@render card("ASCII Art Maker", "/ascii", "Convert images into ASCII art.")}
     </div>
 </div>
