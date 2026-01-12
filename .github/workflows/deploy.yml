@@ -2,8 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
     push:
-        branches: ["svelte"]
+        branches: [main]
     workflow_dispatch:
+    workflow_call:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:

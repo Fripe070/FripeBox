@@ -24,10 +24,7 @@ jobs:
         run: bun install
 
       - name: Fix formatting
-        run: bun run format
-
-      - name: Fix linter issues
-        run: bun run lint:types:fix || true
+        run: bun run fix || true
 
       - uses: stefanzweifel/git-auto-commit-action@v6
         id: auto-commit-action
