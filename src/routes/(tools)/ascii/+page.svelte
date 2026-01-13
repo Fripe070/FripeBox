@@ -222,7 +222,7 @@
             "",
         )}</pre>
 
-    <div class="relative flex size-full items-center justify-center p-4">
+    <div class="relative flex size-full items-center justify-center overflow-auto p-4">
         <CenteredRatio aspectRatio={!loadedImage ? 1 : displayWidth / dimensions.height}>
             <div bind:this={svgContainer} class="max-size-full *:size-full">
                 {#if asciiText}
@@ -266,7 +266,7 @@
         <span
             class={[
                 "absolute bottom-0 left-1/2 -translate-x-1/2 rounded-t-sm bg-back-1 px-1 text-front-1",
-                "flex flex-col items-center",
+                "flex flex-col items-center text-nowrap",
             ]}
         >
             {dimensions.width.toFixed(0)} x {dimensions.height.toFixed(0)}
