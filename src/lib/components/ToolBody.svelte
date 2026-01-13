@@ -22,6 +22,10 @@
         ]}
     >
         {@render sidebar()}
+        <div class="grow"></div>
+        <div class="text-xs text-front-3">
+            <a href="/">Back</a>
+        </div>
     </div>
 {/if}
 {@render children()}
