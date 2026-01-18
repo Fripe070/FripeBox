@@ -55,3 +55,9 @@ code,
 pre {
     @apply font-mono;
 }
+
+@utility contrasting-* {
+    color: hwb(
+        from oklch(from --value([*]) l 0 0) h calc(((b - 50) * 999)) calc(((w - 50) * 999))
+    );
+}
